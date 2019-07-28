@@ -1,0 +1,137 @@
+body{
+	top: 0;
+	left: 0;
+	/*width: 100%;
+	height: 700px;*/
+	background-image: url('bg4.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+
+.container{
+	text-align: center;
+	margin-left: 30%;
+	margin-top: 1em;
+	padding-left: 10px;	
+	border: 1px solid black;
+	border-radius: 10%;
+	width: 50%;
+	height: 70%;
+	background-color: rgba(0,0,0,.7);
+	box-shadow:20px 20px rgba(0,128,128,.9);
+	}
+
+input{
+	width: 60%;
+	border: none;
+	outline: none;
+	border-bottom:2px solid #993333;
+	margin-top: 5px;
+	background-color:rgba(0,0,0,.3);
+	color: white;
+	font-size: 20px;
+	padding-left: 5px;
+	letter-spacing: 3px;
+}
+::placeholder{
+	color: white;
+	font-size: 18px;
+}
+input:focus{
+	border: 1px solid #0099cc;
+	padding:1px;
+}
+
+#b{
+	width: 80%;
+	background-color:#33994d;
+	padding: 3px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-size: 20px;
+	border: none;
+	font-family: Helvetica;
+	font-weight: 700;
+}
+
+#b:hover{
+	background-color:#338099;
+	cursor: pointer;
+
+}
+h1{
+	margin-bottom: 1em;
+	color: #338099;
+    font-family: Georgia, serif;;
+	font-weight: 900;
+	font-size: 40px;
+	animation: side 2s infinite;
+
+}
+h3{
+	animation: head 1s 2;
+	letter-spacing: 3px;
+	font-weight: 900;
+	font-family: Helvetica;
+	color: #0099cc;
+	font-size: 25px;
+	
+}
+
+aside{
+	float: left;
+	margin-top: 20%;
+	border-left: 5px solid #338099;
+	width: 45%;
+	
+	
+}
+article{
+	float: right;
+	margin-top: 5%;
+	width: 50%;
+
+}
+
+@keyframes head {
+	from{letter-spacing: 1px;}
+	to{letter-spacing: 2px;}
+
+}
+
+@keyframes side{
+	
+	from{color: #0099cc;}
+	to{	color: green;	}
+
+}
+
+.para-pass{
+	border: 2px solid green;
+	color: white;
+	margin-top: 10px;
+	font-size: 22px;
+	letter-spacing: 3px;
+	font-family: serif;
+	width: 100%;
+	padding:50px 10px 50px 10px;
+	height: 100%;
+	margin-left: 5px;
+
+}
+.para-fail{
+	border: 2px solid red;
+	color: white;
+	margin-top: 10px;
+	font-size: 22px;
+	letter-spacing: 3px;
+	font-family: serif;
+	width: 100%;
+	padding:50px 10px 50px 10px;
+	height: 100%;
+	margin-left: 5px;
+
+}

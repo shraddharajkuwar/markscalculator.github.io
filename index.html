@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous">
+  	
+  </script>
+	<link rel="stylesheet" type="text/css" href="shr.css">
+	<script type="text/javascript" src="shr.js"></script>
+</head>
+<body>
+<div class="container">
+
+	<section>
+		<aside>
+			<h1 id="card-score">Get Your Score Card</h1>
+			<p id="demo"></p>
+		</aside>
+		<article>
+			<form>
+		        <h3>Enter Your marks</h3>
+		        <input type="text" id="math" placeholder="Math" required="" maxlength="3"><br><br>
+		        <input type="text" id="science" placeholder="Science" required="" maxlength="3" ><br><br>
+		        <input type="text" id="history" placeholder="History" required="" maxlength="3"><br><br>
+		        <input type="text" id="english" placeholder="English" required="" maxlength="3"><br><br>
+		        <input type="text" id="computer" placeholder="Computer" required="" maxlength="3"><br><br>
+	        </form>
+	        <button onclick="show()" id="b">Submit</button>
+		</article>
+	</section>
+
+</div>
+
+
+
+
+
+	<script type="text/javascript">
+		function show(){
+			var m1=document.getElementById('math').value;
+			var m2=document.getElementById('science').value;
+			var m3=document.getElementById('history').value;
+			var m4=document.getElementById('english').value;
+			var m5=document.getElementById('computer').value;
+			var total=parseInt(m1)+parseInt(m2)+parseInt(m3)+parseInt(m4)+parseInt(m5);
+			var per=(total/500)*100;
+			var grade="";
+			var x=document.getElementById('card-score');
+			var y=document.getElementById('demo');
+			var z=document.getElementsByTagName('input').value="";
+
+			if(per<=100 && per>=75){
+				grade="A";
+
+			}else if(per<=74 && per>=65){
+				grade="B";
+			}else if(per<=64 && per>=55){
+				grade="C";
+
+			}else if(per<=54 && per>=40){
+				grade="D";
+			}else{
+				grade="F";
+			}
+
+			if(per>39 && m1>=40 && m2>=40 && m3>=40 && m4>=40 && m5>=40){
+				document.getElementById('demo').innerHTML="Congratulations You are Pass<br> Total out of 500 is "+total+"<br>Percentage is "+per+"%<br>Grade is  "+grade;
+				x.style.display='none';
+				y.style.width='100%';
+				y.className="para-pass";
+			}
+
+			else{
+				document.getElementById('demo').innerHTML="Result is Fail<br> Total out of 500 is "+total+"<br>Percentage is "+per+"%<br>Grade is "+grade;
+				x.style.display='none';
+				y.className="para-fail";
+
+			}			
+		}
+	</script>
+
+</body>
+</html>
